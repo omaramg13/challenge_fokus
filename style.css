@@ -1,0 +1,21 @@
+.texto_focus{
+    color: #FFF;
+font-family: Unbounded;
+font-size: 53.7px;
+font-style: normal;
+font-weight: 250;
+line-height: 150%; /* 80.55px */
+}
+
+.texto_focus strong{
+    color: #FFF;
+    font-family: Unbounded;
+    font-size: 53px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+body{
+    background-color: black;
+}
