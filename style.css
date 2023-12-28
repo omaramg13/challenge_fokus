@@ -29,6 +29,11 @@
     background: var(--Linear-botes, linear-gradient(180deg, #B872FF 0%, #144480 100%));
 }
 
+.boton_principal:hover{
+    border-radius: 32px;
+    border: 1px solid var(--Branco, #FFF);
+    background: var(--Linear-botes, linear-gradient(180deg, #B872FF 0%, #144480 100%));
+}
 
 body{
     background-color: black;
