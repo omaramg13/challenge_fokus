@@ -1,5 +1,10 @@
 body{
-    background-color: black;
+    display: inline-flex;
+    height: 755px;
+    padding: 50px 20px;
+    justify-content: center;
+    align-items: center;
+    background: url(/img/background.png), lightgray 50% / cover no-repeat, linear-gradient(180deg, #1875E9 0%, #041832 48.44%, #01080E 100%);
 }
 
 .logo{
