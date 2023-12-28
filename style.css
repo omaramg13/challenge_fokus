@@ -1,10 +1,10 @@
 .texto_focus{
     color: #FFF;
-font-family: Unbounded;
-font-size: 53.7px;
-font-style: normal;
-font-weight: 250;
-line-height: 150%; /* 80.55px */
+    font-family: Unbounded;
+    font-size: 53.7px;
+    font-style: normal;
+    font-weight: 250;
+    line-height: 150%; /* 80.55px */
 }
 
 .texto_focus strong{
@@ -15,6 +15,20 @@ line-height: 150%; /* 80.55px */
     font-weight: 700;
     line-height: 150%;
 }
+
+.boton_principal {
+    display: flex;
+    width: 180px;
+    height: 40px;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 32px;
+    background: var(--Linear-botes, linear-gradient(180deg, #B872FF 0%, #144480 100%));
+}
+
 
 body{
     background-color: black;
