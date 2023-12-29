@@ -16,7 +16,7 @@ body{
 }
     
 body::before{    
-    background: url(/img/fondo.png), linear-gradient(180deg, #1875E9 0%, #041832 48.44%, #01080E 100%);
+    background: url("/img/fondo.png"), linear-gradient(180deg, #1875E9 0%, #041832 48.44%, #01080E 100%);
     content:"";
     display: inline-flex;
     height: 755px;
