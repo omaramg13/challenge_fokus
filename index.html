@@ -1,35 +1,46 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="img/Favicon-1.png">
+    <title>Fokus</title>
+    <link rel="icon" type="image/png" href="img/fokus_favicon.png">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Fokus - Pomodoro</title>
 </head>
-<img>
 <body>
-    <div class="contenedor">
+    <div class="contenedor_body">
         <header>
-            <div class="logo"><img src="img/Logo.png" ></div>
+            <div class="contenedor_logo">
+                <img src="img/fokus_logo.png" alt="logo" class="logo">
+            </div>
         </header>
-        <main >
-            <div class="principal">
-                <div class="texto_focus">
-                    <p >Optimiza tu productividad, <strong>sumérgete en lo que importa.</strong></p>
+        <main>
+            <div class="contenedor_principal">
+                <div class="contenedor_izquierdo">
+                    <p class="texto_fokus">Optimiza tu productividad, <strong>sumérgete en lo que importa.</strong></p>
                 </div>
-                <div class="timer">
-    
-                </div>            
+                <div class="contenedor_derecho">
+                    <div class="contenedor_derecho_interno">
+                        <div class="contenedor_temporizador">
+                            <ul class="lista_tabs">
+                                <li class="tabs"><button class="tab tab_focus">Enfocar</buttn></li>
+                                <li class="tabs"><button class="tab tab_dc">Descanso Corto</button></li>
+                                <li class="tabs"><button class="tab tab_dl">Descanso largo</button></li>
+                            </ul>
+                            <p class="contador">25:00</p>
+                            <div class="contenedor_boton_principal">
+                                <button class="boton boton_principal">Iniciar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
         <footer>
-    
+            <p>Desarrollado por Alura Latam</p>
         </footer>
-
     </div>
-    <script source = 'app.js'></script>
-
+    <script src="main.js"></script>
 </body>
 </html>
