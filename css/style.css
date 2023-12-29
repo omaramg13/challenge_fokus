@@ -20,6 +20,7 @@ body::before{
     content:"";
     display: inline-flex;
     height: 755px;
+    width: auto;
     padding: 50px 20px;
     justify-content: center;
     align-items: center;
