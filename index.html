@@ -17,24 +17,27 @@
         </header>
         <main>
             <div class="contenedor_principal">
-                <div class="contenedor_izquierdo">
+                <section class="contenedor_izquierdo">
                     <p class="texto_fokus">Optimiza tu productividad, <strong>sumérgete en lo que importa.</strong></p>
-                </div>
-                <div class="contenedor_derecho">
+                </section>
+
+                <section class="contenedor_derecho">
                     <div class="contenedor_derecho_interno">
                         <div class="contenedor_temporizador">
-                            <ul class="lista_tabs">
-                                <li class="tabs"><button class="tab tab_focus">Enfocar</buttn></li>
-                                <li class="tabs"><button class="tab tab_dc">Descanso Corto</button></li>
-                                <li class="tabs"><button class="tab tab_dl">Descanso largo</button></li>
-                            </ul>
-                            <p class="contador">25:00</p>
+                            <div class="lista_tabs">
+                                <div class="tabs tab_focus"><p id="tab_focus">Enfocar</p></div>
+                                <div class="tabs"><p id="tab_dc">Descanso Corto</p></div>
+                                <div class="tabs"><p id="tab_dl">Descanso largo</p></div>
+                            </div>
+                            <div class="contador">
+                                <h1 id="contador"></h1>
+                            </div>
                             <div class="contenedor_boton_principal">
-                                <button class="boton boton_principal">Iniciar</button>
+                                <button id="boton_principal">Iniciar</button>
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
         </main>
         <footer>

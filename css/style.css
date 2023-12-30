@@ -148,7 +148,7 @@ main{
     gap: 16px;    
 }
 
-.tab{
+.tabs{
     display: flex;
     padding: 8px;
     justify-content: center;
@@ -165,20 +165,20 @@ main{
     line-height: 150%; /* 27px */
 }
 
-.tab:hover{
+.tabs:hover{
     border-radius: 8px;
     border: 2px solid rgba(24, 117, 233, 0.50);
     background: rgba(24, 117, 233, 0.30);
 }
 
-.tab:active{
+.tabs:active{
     border-radius: 8px;
     border: 2px solid rgba(24, 117, 233, 0.50);
     background: rgba(24, 117, 233, 0.30);
 }
 
 
-.contador{
+#contador{
     color: var(--Branco, #FFF);
     text-align: center;
     font-family: Unbounded;
@@ -196,7 +196,7 @@ main{
     align-self: stretch;
 }
 
-.boton{
+#boton_principal{
     display: flex;
     width: 180px;
     height: 40px;
@@ -218,7 +218,7 @@ main{
     line-height: 150%; /* 27px */    
 }
 
-.boton:hover{
+#boton_principal:hover{
     border-radius: 32px;
     border: 1px solid var(--Branco, #FFF);
     background: var(--Linear-botes, linear-gradient(180deg, #B872FF 0%, #144480 100%));    
