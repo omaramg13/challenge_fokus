@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: white;
+    color: white;    
 }
 
 body{
@@ -137,9 +137,8 @@ main{
     border-radius: 32px;
     border: 2px solid var(--Azul-royal, #144480);
     background: var(--Fundo-card-timer, rgba(20, 68, 128, 0.30));
+    cursor:pointer;
 }
-
-
 
 .lista_tabs{
     display: flex;
@@ -165,26 +164,25 @@ main{
     line-height: 150%; /* 27px */
 }
 
+.tabs.activa{
+    border-radius: 8px;
+    border: 2px solid rgba(24, 117, 233, 0.50);
+    background: rgba(24, 117, 233, 0.30);
+}
+
 .tabs:hover{
     border-radius: 8px;
     border: 2px solid rgba(24, 117, 233, 0.50);
     background: rgba(24, 117, 233, 0.30);
 }
 
-.tabs:active{
-    border-radius: 8px;
-    border: 2px solid rgba(24, 117, 233, 0.50);
-    background: rgba(24, 117, 233, 0.30);
-}
-
-
 #contador{
     color: var(--Branco, #FFF);
     text-align: center;
-    font-family: Unbounded;
+    font-family: 'DSEG14 Classic', sans-serif;
     font-size: 112px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: normal;
     line-height: normal;
 }
 
@@ -215,7 +213,8 @@ main{
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
-    line-height: 150%; /* 27px */    
+    line-height: 150%; /* 27px */
+    cursor:pointer;
 }
 
 #boton_principal:hover{
