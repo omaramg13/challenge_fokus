@@ -37,7 +37,7 @@ function cuenta_regresiva(){
     }
 
     console.log(tiempoEnSegundos);
-    tiempoEnSegundos = tiempoEnSegundos-1;
+    tiempoEnSegundos -= 1;
     mostrarTiempo();
 
 }
