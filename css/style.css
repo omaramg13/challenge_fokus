@@ -27,7 +27,7 @@ body{
 
 body::before{
     /*background: url(/img/fokus_bg.png), lightgray 50% cover no-repeat, linear-gradient(180deg, #1875E9 0%, #041832 48.44%, #01080E 100%);*/
-    background-image: url(/img/fokus_bg.png),linear-gradient(180deg, #1875E9 0%, #041832 48.44%, #01080E 100%);
+    background-image: url(img/fokus_bg.png),linear-gradient(180deg, #1875E9 0%, #041832 48.44%, #01080E 100%);
     background-color: lightgray 50%;
     background-size: cover;
     background-repeat: no-repeat;
