@@ -17,7 +17,7 @@
 
 ## Comenzando 🚀
 
-*Puedes obtener una copia del proyecto accediendo al repositorio para descargarlo. [Challenge Fokus](https://github.com/omaramg13/challenge_fokus)
+*Puedes obtener una copia del proyecto accediendo al repositorio para descargarlo. [Challenge Fokus](https://github.com/omaramg13/challenge_fokus)*
 
 ## Construido con 🛠️
 
