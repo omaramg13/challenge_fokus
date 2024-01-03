@@ -1,34 +1,35 @@
 const listaTabs = document.querySelectorAll(".tabs");
 let boton_principal = document.getElementById("boton_principal");
 let contador = document.getElementById("contador");
-let tiempoEnSegundos = 25;
+let tiempoEnSegundos = 75;
 let intervalId = null;
 let tabActivaId = 'tab_focus';
 
-let contador_focus = 25;
-let contador_dc = 5;
-let contador_dl = 15;
+let contador_focus = 75;
+let contador_dc = 15;
+let contador_dl = 45;
+
 
 function cuenta_regresiva(){
     if (tiempoEnSegundos <= 0){
         cerrar();        
-        alert("Tiempo finalizado");
+        //alert("Tiempo finalizado");
         
-        if(tabActivaId==='tab_focus') {
-            tiempoEnSegundos=25;
-            mostrarTiempo();
+        if(tabActivaId === 'tab_focus') {
+            tiempoEnSegundos=75;
+            reinicio_temporizador(tabActivaId);
 
         }
 
-        else if(tabActivaId==='tab_dc') {
-            tiempoEnSegundos=5;
-            mostrarTiempo();
-
-        }
-
-        else if(tabActivaId==='tab_dl'){
+        else if(tabActivaId === 'tab_dc') {
             tiempoEnSegundos=15;
-            mostrarTiempo();
+            reinicio_temporizador(tabActivaId);
+
+        }
+
+        else if(tabActivaId === 'tab_dl'){
+            tiempoEnSegundos=45;
+            reinicio_temporizador(tabActivaId);
 
         }
 
@@ -40,6 +41,13 @@ function cuenta_regresiva(){
     tiempoEnSegundos -= 1;
     mostrarTiempo();
 
+}
+
+
+function reinicio_temporizador(tabActivaId){
+    mostrarTiempo();
+    controlSonido(`sonido_${tabActivaId}`,'stop');
+    controlSonido(`alert_${tabActivaId}`,'play');
 }
 
 
@@ -55,6 +63,7 @@ function iniciarPausar(){
     }
     
     intervalId = setInterval(cuenta_regresiva,1000);
+    controlSonido(`sonido_${tabActivaId}`,'play');
     boton_principal.textContent="Pausar";
 
 }
@@ -64,6 +73,7 @@ function cerrar(){
     clearInterval(intervalId);
     intervalId=null;
     boton_principal.textContent="Iniciar";
+    controlSonido(`sonido_${tabActivaId}`,'pause');
 
 }
 
@@ -94,76 +104,130 @@ for (let i = 0; i < listaTabs.length; i++) {
     const tabClickId = tabClickClase.classList[1];
 
     tabClickClase.onclick = function() { 
-        
-        for (let j = 0; j < listaTabs.length; j++) {
-            const tabsInactivasClase = listaTabs[j];
-            const tabInactivaId = tabsInactivasClase.classList[1];
-            
-            if (!tabsInactivasClase.classList.contains(tabClickId) && tabsInactivasClase.classList.contains('activa')) {
+        console.log(tabClickId);
+        console.log(tabClickClase);
 
-                if(tabInactivaId === 'tab_focus') {
-                    contador_focus = tiempoEnSegundos;
-                } else if (tabInactivaId === 'tab_dc') {
-                    contador_dc = tiempoEnSegundos;
-                } else if (tabInactivaId === 'tab_dl') {
-                    contador_dl = tiempoEnSegundos;
-                }
-
-                tabActiva(tabInactivaId);
-                
-            }
-
-        }
+        desactivaTabClick(tabClickId);        
         
         if(tabClickId === 'tab_focus' && !tabClickClase.classList.contains('activa')) {
-            tiempoEnSegundos = contador_focus;
-            cerrar();
-            mostrarTiempo();
-            tabActiva(tabClickId);
-            
+            tiempoEnSegundos = contador_focus;            
+            tabActivaClick(tabClickId);
+
         }
         
         else if (tabClickId === 'tab_dc' && !tabClickClase.classList.contains('activa')) {
-            tiempoEnSegundos = contador_dc;
-            cerrar();
-            mostrarTiempo();
-            tabActiva(tabClickId);
+            tiempoEnSegundos = contador_dc;            
+            tabActivaClick(tabClickId);
         
         }
         
         else if (tabClickId === 'tab_dl' && !tabClickClase.classList.contains('activa')) {
             tiempoEnSegundos = contador_dl;
-            cerrar();
-            mostrarTiempo();
-            tabActiva(tabClickId);
+            tabActivaClick(tabClickId);
 
         }
-    
+            
     }
 
     tabClickClase.onkeydown = function(evento) {
         if (evento.code === "Space" || evento.code === "Enter") {
+
+            desactivaTabClick(tabClickId);
+
             if(!tabClickClase.classList.contains('activa')) {
-                tabActiva(tabClickId);
+                if(tabClickId === 'tab_focus' && !tabClickClase.classList.contains('activa')) {
+                    tiempoEnSegundos = contador_focus;
+                    tabActivaClick(tabClickId);
+        
+                }
+                
+                else if (tabClickId === 'tab_dc' && !tabClickClase.classList.contains('activa')) {
+                    tiempoEnSegundos = contador_dc;
+                    tabActivaClick(tabClickId);
+                                    
+                }
+                
+                else if (tabClickId === 'tab_dl' && !tabClickClase.classList.contains('activa')) {
+                    tiempoEnSegundos = contador_dl;
+                    tabActivaClick(tabClickId);                    
+        
+                }
+    
             }
             
         }
     }
     
-    tabClickClase.onkeyup = function(evento) {
-        if (evento.code === "Space" || evento.code === "Enter") {
-            if(!tabClickClase.classList.contains('activa')) {
-                tabActiva(tabClickId);
-            }
+    // tabClickClase.onkeyup = function(evento) {
+    //     if (evento.code === "Space" || evento.code === "Enter") {
+    //         if(!tabClickClase.classList.contains('activa')) {
+    //             tabActiva(tabClickId);
+
+    //         }
             
-        }
-    }
+    //     }
+    // }
 
 }
+
 
 function tabActiva(idClaseTab) {
     document.getElementById(idClaseTab).classList.toggle('activa');
 }
+
+
+function tabActivaClick(tabClickId){
+    cerrar();
+    mostrarTiempo();
+    tabActiva(tabClickId);
+    tabActivaId=tabClickId;
+
+}
+
+
+function desactivaTabClick(tabClickId){
+    for (let i = 0; i < listaTabs.length; i++) {
+        const tabsInactivasClase = listaTabs[i];
+        const tabInactivaId = tabsInactivasClase.classList[1];
+        
+        if (!tabsInactivasClase.classList.contains(tabClickId) && tabsInactivasClase.classList.contains('activa')) {
+
+            if(tabInactivaId === 'tab_focus') {
+                contador_focus = tiempoEnSegundos;
+            } else if (tabInactivaId === 'tab_dc') {
+                contador_dc = tiempoEnSegundos;
+            } else if (tabInactivaId === 'tab_dl') {
+                contador_dl = tiempoEnSegundos;
+            }
+
+            console.log(tabInactivaId);
+            tabActiva(tabInactivaId);
+            
+        }
+
+    }
+
+}
+
+
+function controlSonido(idElementoAudio,accionAudio){
+    if(accionAudio === 'play') {
+        document.getElementById(idElementoAudio).play();
+
+    }
+    
+    else if(accionAudio === 'pause') {
+        document.getElementById(idElementoAudio).pause();
+        
+    } 
+    
+    else if(accionAudio === 'stop') {
+        document.getElementById(idElementoAudio).pause();
+        document.getElementById(idElementoAudio).currentTime = 0;
+
+    }
+}
+
 
 cargar();
 
