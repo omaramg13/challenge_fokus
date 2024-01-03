@@ -1,13 +1,13 @@
 const listaTabs = document.querySelectorAll(".tabs");
 let boton_principal = document.getElementById("boton_principal");
 let contador = document.getElementById("contador");
-let tiempoEnSegundos = 75;
+let tiempoEnSegundos = 60*25;
 let intervalId = null;
 let tabActivaId = 'tab_focus';
 
-let contador_focus = 75;
-let contador_dc = 15;
-let contador_dl = 45;
+let contador_focus = 60*25;
+let contador_dc = 60*5;
+let contador_dl = 60*15;
 
 
 function cuenta_regresiva(){
@@ -16,19 +16,19 @@ function cuenta_regresiva(){
         //alert("Tiempo finalizado");
         
         if(tabActivaId === 'tab_focus') {
-            tiempoEnSegundos=75;
+            tiempoEnSegundos=60*25;
             reinicio_temporizador(tabActivaId);
 
         }
 
         else if(tabActivaId === 'tab_dc') {
-            tiempoEnSegundos=15;
+            tiempoEnSegundos=60*5;
             reinicio_temporizador(tabActivaId);
 
         }
 
         else if(tabActivaId === 'tab_dl'){
-            tiempoEnSegundos=45;
+            tiempoEnSegundos=60*15;
             reinicio_temporizador(tabActivaId);
 
         }
