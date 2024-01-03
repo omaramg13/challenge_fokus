@@ -13,7 +13,6 @@ let contador_dl = 60*15;
 function cuenta_regresiva(){
     if (tiempoEnSegundos <= 0){
         cerrar();        
-        //alert("Tiempo finalizado");
         
         if(tabActivaId === 'tab_focus') {
             tiempoEnSegundos=60*25;
@@ -37,7 +36,6 @@ function cuenta_regresiva(){
 
     }
 
-    console.log(tiempoEnSegundos);
     tiempoEnSegundos -= 1;
     mostrarTiempo();
 
@@ -48,6 +46,7 @@ function reinicio_temporizador(tabActivaId){
     mostrarTiempo();
     controlSonido(`sonido_${tabActivaId}`,'stop');
     controlSonido(`alert_${tabActivaId}`,'play');
+
 }
 
 
@@ -104,8 +103,6 @@ for (let i = 0; i < listaTabs.length; i++) {
     const tabClickId = tabClickClase.classList[1];
 
     tabClickClase.onclick = function() { 
-        console.log(tabClickId);
-        console.log(tabClickClase);
 
         desactivaTabClick(tabClickId);        
         
@@ -157,22 +154,13 @@ for (let i = 0; i < listaTabs.length; i++) {
             
         }
     }
-    
-    // tabClickClase.onkeyup = function(evento) {
-    //     if (evento.code === "Space" || evento.code === "Enter") {
-    //         if(!tabClickClase.classList.contains('activa')) {
-    //             tabActiva(tabClickId);
-
-    //         }
-            
-    //     }
-    // }
 
 }
 
 
 function tabActiva(idClaseTab) {
     document.getElementById(idClaseTab).classList.toggle('activa');
+
 }
 
 
@@ -200,7 +188,6 @@ function desactivaTabClick(tabClickId){
                 contador_dl = tiempoEnSegundos;
             }
 
-            console.log(tabInactivaId);
             tabActiva(tabInactivaId);
             
         }
@@ -226,8 +213,8 @@ function controlSonido(idElementoAudio,accionAudio){
         document.getElementById(idElementoAudio).currentTime = 0;
 
     }
+
 }
 
 
 cargar();
-

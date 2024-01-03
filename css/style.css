@@ -2,7 +2,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: white;    
+    color: white;
+
 }
 
 body{
@@ -11,23 +12,12 @@ body{
     flex-direction: column;
     align-items: center;
     gap: 100px;
+
 }
-
-
-/* background: bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment initial|inherit;
-   background: url(<path-to-image>), lightgray 50% / cover no-repeat, linear-gradient(180deg, #1875E9 0%, #041832 48.44%, #01080E 100%);
-
-   background-image: url(/img/fokus_bg.png);
-   background-color: lightgray 50% ;
-   background-position: 
-   background-size:
-   background-repeat: no-repeat;
-
-*/
 
 body::before{
     /*background: url(/img/fokus_bg.png), lightgray 50% cover no-repeat, linear-gradient(180deg, #1875E9 0%, #041832 48.44%, #01080E 100%);*/
-    background-image: url(./img/fokus_bg.png),linear-gradient(180deg, #1875E9 0%, #041832 48.44%, #01080E 100%);
+    background-image: url(/img/fokus_bg.png),linear-gradient(180deg, #1875E9 0%, #041832 48.44%, #01080E 100%);
     background-color: lightgray 50%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -41,6 +31,7 @@ body::before{
     width: 100%;
     justify-content: center;
     align-items: center;
+
 }
 
 .contenedor_body{
@@ -51,18 +42,21 @@ body::before{
     gap: 100px;
     position:relative;
     padding: 35px 20px;
+
 }
 
 .contenedor_logo{
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .logo{
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 main{
@@ -72,6 +66,7 @@ main{
     justify-content: center;
     align-items: flex-start;
     gap: 15px;
+
 }
 
 .contenedor_principal{
@@ -80,7 +75,8 @@ main{
     padding: 0px 30px;
     justify-content: center;
     align-items: flex-start;
-    gap: 15px;    
+    gap: 15px;
+
 }
 
 .contenedor_izquierdo{
@@ -89,16 +85,19 @@ main{
     height: 402px;
     justify-content: center;
     align-items: center;
-    flex-shrink: 0;    
+    flex-shrink: 0;
+
 }
 
 .texto_fokus{
+    flex: 1 0 0;
     color: #FFF;
     font-family: Unbounded;
     font-size: 53.7px;
     font-style: normal;
     font-weight: 250;
     line-height: 150%; /* 80.55px */ 
+
 }
 
 .texto_fokus strong{
@@ -108,6 +107,7 @@ main{
     font-style: normal;
     font-weight: 700;
     line-height: 150%;
+
 }
 
 .contenedor_derecho{
@@ -115,7 +115,8 @@ main{
     padding: 0px 24px;
     flex-direction: column;
     align-items: center;
-    gap: 40px;    
+    gap: 40px;
+
 }
 
 .contenedor_derecho_interno{
@@ -123,6 +124,7 @@ main{
     flex-direction: column;
     align-items: center;
     gap: 32px;
+
 }
 
 .contenedor_temporizador{
@@ -134,25 +136,29 @@ main{
     align-items: center;
     gap: 30px;
     align-self: stretch;
+    
     border-radius: 32px;
     border: 2px solid var(--Azul-royal, #144480);
     background: var(--Fundo-card-timer, rgba(20, 68, 128, 0.30));
     cursor:pointer;
+
 }
 
 .lista_tabs{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 16px;    
+    gap: 16px;
+
 }
 
 .tabs{
     display: flex;
     padding: 8px;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     border-radius: 8px;
+
     color: var(--Branco, #FFF);
     text-align: center;
     
@@ -162,18 +168,21 @@ main{
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 27px */
+
 }
 
 .tabs.activa{
     border-radius: 8px;
     border: 2px solid rgba(24, 117, 233, 0.50);
     background: rgba(24, 117, 233, 0.30);
+
 }
 
 .tabs:hover{
     border-radius: 8px;
     border: 2px solid rgba(24, 117, 233, 0.50);
     background: rgba(24, 117, 233, 0.30);
+
 }
 
 #contador{
@@ -184,6 +193,7 @@ main{
     font-style: normal;
     font-weight: normal;
     line-height: normal;
+
 }
 
 .contenedor_boton_principal{
@@ -192,6 +202,7 @@ main{
     align-items: center;
     gap: 24px;
     align-self: stretch;
+
 }
 
 #boton_principal{
@@ -208,6 +219,7 @@ main{
 
     color: var(--Branco, #FFF);
     text-align: center;
+
     /* Paragraph Bold */
     font-family: Montserrat;
     font-size: 18px;
@@ -215,12 +227,14 @@ main{
     font-weight: 600;
     line-height: 150%; /* 27px */
     cursor:pointer;
+
 }
 
 #boton_principal:hover{
     border-radius: 32px;
     border: 1px solid var(--Branco, #FFF);
-    background: var(--Linear-botes, linear-gradient(180deg, #B872FF 0%, #144480 100%));    
+    background: var(--Linear-botes, linear-gradient(180deg, #B872FF 0%, #144480 100%));
+
 }
 
 .contenedor_footer{
@@ -229,49 +243,49 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
 
 }
 
 .texto_footer{
     color:#B872FF;
     font-family: Unbounded;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 150%;
 
 }
 
 
-
 @media only screen and (max-width: 1024px){
-    * {
-        max-width: 1024px;
-    }
-
-
     body{        
         width: 100%;
         padding: 0 0;
         gap: 16px;
+
     }
 
     body::before{
         width: 100%;
+
     }
 
     .contenedor_body{
         width: 100%;
         padding: 20px 20px;
         gap: 40px;
+
     }
 
     .contenedor_logo{
         padding: 40px 0px;
+
     }
     
     main{
         width: 100%;
         padding: 0 10px;
+
     }
-        
 
     .contenedor_principal{
         width: 100%;
@@ -287,14 +301,12 @@ main{
     }
 
     .texto_fokus{
-        font-size: 44px;
-        line-height: 150%; /* 39px */ 
+        font-size: 53.7px;
 
     }
     
     .texto_fokus strong{
-        font-size: 44px;
-        line-height: 150%;
+        font-size: 53px;
 
     }
     
@@ -320,6 +332,7 @@ main{
         gap: 10px;
 
     }
+
     .tabs{
         font-size: 18px;
 
@@ -327,45 +340,46 @@ main{
 
     #contador{
         font-size: 53.7px;
+
     }
     
     .texto_footer{
         align-self: stretch;
+
     }
 
 }
 
 
-/* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px){
-    * {
-        max-width: 600px;
-    }
-
-
     body{        
         width: 100%;
         padding: 0 0;
         gap: 16px;
+
     }
 
     body::before{
         width: 100%;
+
     }
 
     .contenedor_body{
         width: 100%;
         padding: 0 10px;
         gap: 25px;
+
     }
 
     .contenedor_logo{
         padding: 40px 0px;
+
     }
     
     main{
         width: 100%;
         padding: 0 10px;
+
     }
         
 
@@ -383,14 +397,13 @@ main{
     }
 
     .texto_fokus{
-        font-size: 20px;
-        line-height: 150%; /* 39px */ 
+        align-self: stretch;
+        font-size: 26px;
 
     }
     
     .texto_fokus strong{
-        font-size: 20px;
-        line-height: 150%;
+        font-size: 26px;
 
     }
     
@@ -416,6 +429,7 @@ main{
         gap: 10px;
 
     }
+
     .tabs{
         font-size: 12.5px;
 
@@ -423,10 +437,12 @@ main{
 
     #contador{
         font-size: 53.7px;
+
     }
     
     .texto_footer{
         align-self: stretch;
+
     }
 
 }
