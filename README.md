@@ -32,6 +32,6 @@ El proyecto debe permitir las siguientes funcionalidades:
 
 - El contador de largo descanso debe comenzar desde el minuto 15 cuándo el usuário haga clic y el botón iniciar el contador hará la cuenta regresiva hasta llegar a 0 y el texto del botón debe cambiar para pausar.
 
--Cuando el usuario haga clic en las pestañas, debe poder cambiar entre ellas y el temporizador que esté activo debe pausarse.
+- Cuando el usuario haga clic en las pestañas, debe poder cambiar entre ellas y el temporizador que esté activo debe pausarse.
 
 
