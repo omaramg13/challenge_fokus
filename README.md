@@ -15,6 +15,10 @@
 
 *Para poner en practica los conocimientos de JavaScript, HTML y CSS adquiridos en el curso se desarrolla el proyecto para desarrollar una herramienta que utilice la tecnica Pomodoro*
 
+## Comenzando 🚀
+
+*Puedes obtener una copia del proyecto accediendo al repositorio para descargarlo. [Challenge Fokus](https://github.com/omaramg13/challenge_fokus)
+
 ## Construido con 🛠️
 
 - JavaScript
