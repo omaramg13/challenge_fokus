@@ -5,7 +5,7 @@
 <img src="/img/fokus_logo.png" alt="Logo">
 </div>
 
-*** Historia ***
+***Historia***
 
 *¿Conoces la técnica Pomodoro?*
 
