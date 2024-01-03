@@ -8,11 +8,11 @@ JS Development course Challenge
 - Un botón que debe iniciar y pausar nuestra aplicación.
 - Un campo donde estará tu temporizador.
 
-![Diseño elementos] (https://trello.com/1/cards/6562d8929a3a64da48467633/attachments/6562d8939a3a64da48467ad0/download/image.png)
+![Diseño elementos](https://trello.com/1/cards/6562d8929a3a64da48467633/attachments/6562d8939a3a64da48467ad0/download/image.png)
 
 - Y también el footer.
 
-![Diseño footer] (https://trello.com/1/cards/6562d8929a3a64da48467633/attachments/6562d8939a3a64da48467af0/download/image.png)
+![Diseño footer](https://trello.com/1/cards/6562d8929a3a64da48467633/attachments/6562d8939a3a64da48467af0/download/image.png)
 
 - Cada pestaña debe tener un timer específico, siendo 25 minutos para la pestaña enfoque, 5 minutos para la pestaña descanso corto y 15 minutos para la pestaña descanso largo .
 
